@@ -73,7 +73,7 @@ def run_play(task_id: str, cfg: PlayConfig):
     motion_cmd = env_cfg.commands["motion"]
     assert isinstance(motion_cmd, MotionCommandCfg)
 
-    # Check for local motion file first (works for both dummy and trained modes)
+    # Check for local motion file first (works for both dummy and trained modes).
     if cfg.motion_file is not None and Path(cfg.motion_file).exists():
       print(f"[INFO]: Using local motion file: {cfg.motion_file}")
       motion_cmd.motion_file = cfg.motion_file

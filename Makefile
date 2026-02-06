@@ -43,7 +43,7 @@ build:
 
 .PHONY: docs
 docs:
-	uv run --extra docs sphinx-build docs docs/_build
+	uv run --group docs sphinx-build docs docs/_build
 
 .PHONY: docs-watch
 docs-watch:

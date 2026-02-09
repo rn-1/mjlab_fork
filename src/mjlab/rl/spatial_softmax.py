@@ -176,13 +176,13 @@ class SpatialSoftmaxCNNModel(CNNModel):
           **group_cfg,
         )
 
-    self._cnn_latent_dim = 0
+    self.cnn_latent_dim = 0
     for cnn in _cnns.values():
       if cnn.output_channels is not None:
         raise ValueError(
           "The output of the CNN must be flattened before passing it to the MLP."
         )
-      self._cnn_latent_dim += int(cnn.output_dim)  # type: ignore[arg-type]
+      self.cnn_latent_dim += int(cnn.output_dim)  # type: ignore[arg-type]
 
     MLPModel.__init__(
       self,

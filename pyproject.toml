@@ -43,7 +43,7 @@ dependencies = [
   "viser>=1.0.21",
   "moviepy",
   "tensordict",
-  "rsl-rl-lib==4.0.0",
+  "rsl-rl-lib==4.0.1",
   "tensorboard>=2.20.0",
   "onnxscript>=0.5.4",
   "wandb>=0.22.3",
@@ -121,8 +121,7 @@ explicit = true
 warp-lang = { index = "nvidia", marker = "sys_platform != 'darwin'" }
 mujoco = { index = "mujoco" }
 torch = { index = "pytorch-cu128", extra = "cu128", marker = "sys_platform != 'darwin'" }
-mujoco-warp = { git = "https://github.com/google-deepmind/mujoco_warp", rev = "6f5ba7dd99d73516543aef99e52916b9c71b1567" }
-rsl-rl-lib = { git = "https://github.com/kevinzakka/rsl_rl", rev = "fix/cnn-model-init-order" }
+mujoco-warp = { git = "https://github.com/google-deepmind/mujoco_warp", rev = "b75f85b4dbc60f2d6e9277d345953aa1f1dd1611" }
 
 [tool.ruff]
 src = ["src"]  # Helpful for recognizing first-party imports.

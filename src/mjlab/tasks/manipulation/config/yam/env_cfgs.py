@@ -72,6 +72,7 @@ def yam_lift_cube_env_cfg(
   if play:
     cfg.episode_length_s = int(1e9)
     cfg.observations["actor"].enable_corruption = False
+    cfg.curriculum = {}
 
     # Higher command resampling frequency for more dynamic play.
     assert cfg.commands is not None

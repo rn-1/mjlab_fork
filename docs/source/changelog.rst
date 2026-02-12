@@ -5,8 +5,8 @@ Changelog
 Upcoming version (not yet released)
 ------------------------------------
 
-New features
-^^^^^^^^^^^^
+Added
+^^^^^
 
 - Added camera sensor, unified sensor context, and spatial-softmax CNN
   model.
@@ -27,7 +27,7 @@ New features
 - Curriculum stages can now be defined in iterations instead of raw
   steps.
 
-Changes
+Changed
 ^^^^^^^
 
 - Upgraded ``rsl-rl-lib`` to 4.0.0 and replaced the custom ONNX
@@ -37,8 +37,8 @@ Changes
 - Unnamed freejoints are now automatically named to prevent
   ``KeyError`` during entity init.
 
-Bug fixes
-^^^^^^^^^
+Fixed
+^^^^^
 
 - Fixed ``randomize_pd_gains`` crash with ``num_envs > 1``.
 - Fixed ``ctrl_ids`` index error with multiple actuated entities.

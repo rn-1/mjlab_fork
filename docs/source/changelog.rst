@@ -2,6 +2,16 @@
 Changelog
 =========
 
+Upcoming version (not yet released)
+-----------------------------------
+
+Changed
+^^^^^^^
+
+- Replaced the single ``scale`` parameter in ``DifferentialIKActionCfg`` with
+  separate ``delta_pos_scale`` and ``delta_ori_scale`` for independent scaling
+  of position and orientation components.
+
 Version 1.1.1 (February 14, 2026)
 ---------------------------------
 

@@ -7,6 +7,20 @@ from mjlab.rl import (
 )
 
 
+@dataclass
+class CollectionCfg:
+  layers: list[str]
+
+
+@dataclass
+class _TaskCfg:
+  env_cfg: ManagerBasedRlEnvCfg
+  play_env_cfg: ManagerBasedRlEnvCfg
+  rl_cfg: RslRlOnPolicyRunnerCfg
+  runner_cls: type | None
+  collection_cfg: CollectionCfg | None = None
+
+
 def unitree_g1_ppo_runner_cfg() -> RslRlOnPolicyRunnerCfg:
   """Create RL runner configuration for Unitree G1 velocity task."""
   return RslRlOnPolicyRunnerCfg(

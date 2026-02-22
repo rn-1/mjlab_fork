@@ -22,3 +22,21 @@ register_mjlab_task(
   rl_cfg=unitree_go1_ppo_runner_cfg(),
   runner_cls=VelocityOnPolicyRunner,
 )
+
+register_mjlab_task(
+  task_id="Mjlab-Velocity-Flat-Unitree-Go1-Collect",
+  env_cfg=unitree_go1_flat_env_cfg(),
+  play_env_cfg=unitree_go1_flat_env_cfg(play=True),
+  rl_cfg=unitree_go1_ppo_runner_cfg(),
+  runner_cls=VelocityOnPolicyRunner,
+  collection_cfg = CollectionCfg(layers=["mlp"]),
+)
+
+register_mjlab_task(
+  task_id="Mjlab-Velocity-Rough-Unitree-Go1-Collect",
+  env_cfg=unitree_go1_rough_env_cfg(),
+  play_env_cfg=unitree_go1_rough_env_cfg(play=True),
+  rl_cfg=unitree_go1_ppo_runner_cfg(),
+  runner_cls=VelocityOnPolicyRunner,
+  collection_cfg = CollectionCfg(layers=["mlp"]),
+)
